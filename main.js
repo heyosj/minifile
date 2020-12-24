@@ -1,6 +1,18 @@
 const fs = require('fs');
 
 function miniReader(filePath) {
+	const files = filePath.split('/');
+	let filename;
+	let fileType;
+
+	files.forEach((file) => {
+		if (file.includes('.js') || file.includes('.css')) {
+			const splitFileName = file.split('.');
+			filename = splitFileName[0];
+			fileType = splitFileName[1];
+		}
+	});
+
 	fs.readFile(`${filePath}`, 'utf-8', (err, fileContent) => {
 		if (err) {
 			console.log(err);
@@ -8,14 +20,12 @@ function miniReader(filePath) {
 		}
 		const removedWhiteSpace = fileContent.replace(/\s/g, '');
 
-		fs.writeFile('./minified-files/min.js', removedWhiteSpace, function (err) {
+		fs.writeFile(`./minified-files/${filename}.min.${fileType}`, removedWhiteSpace, function (err) {
 			if (err) throw err;
 			console.log('minified!');
 		});
 	});
 }
-
-// 3. WRITE NEW FILE WITH ALL THE SPACES AND COMMENTS REMOVED
 
 miniReader('./test-files/test.js');
 
