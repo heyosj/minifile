@@ -1,6 +1,7 @@
 const fs = require('fs');
 
-function miniReader(filePath) {
+function miniFile(filePath) {
+	const regex = /\/\*[\s\S]*?\*\/|([^\\:]|^)\/\/.*$/gm;
 	const files = filePath.split('/');
 	let filename;
 	let fileType;
@@ -18,17 +19,20 @@ function miniReader(filePath) {
 			console.log(err);
 			return;
 		}
-		const removedWhiteSpace = fileContent.replace(/\s/g, '');
+		let removedWhiteSpace = fileContent.replace(/\s/g, ' ');
+		const noComments = removedWhiteSpace.replace(regex, '$1');
+		const folderName = './minifiedFiles';
 
-		fs.writeFile(`./minified-files/${filename}.min.${fileType}`, removedWhiteSpace, function (err) {
+		if (!fs.existsSync(folderName)) {
+			fs.mkdirSync(folderName);
+		}
+
+		fs.writeFile(`${folderName}/${filename}.min.${fileType}`, noComments, function (err) {
 			if (err) throw err;
-			console.log('minified!');
+			console.log(`The deed is done for file type: ${fileType}`);
 		});
 	});
 }
 
-miniReader('./test-files/test.js');
-
-// needs to name the new file what the old file was named but with min in it
-// comment out old js and css file in html and add the min versions
-// remove comments
+miniFile('./test-files/test.js');
+miniFile('./test-files/test.css');
