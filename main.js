@@ -6,7 +6,7 @@ function miniReader(filePath) {
 			console.log(err);
 			return;
 		}
-		console.log(fileContent);
+		console.log(fileContent.replace(/\s/g, ''));
 	});
 }
 // 2. REMOVE WHITESPACE AND COMMENTS
