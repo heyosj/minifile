@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-function miniFile(filePath) {
+function minifile(filePath) {
 	const regex = /\/\*[\s\S]*?\*\/|([^\\:]|^)\/\/.*$/gm;
 	const files = filePath.split('/');
 	let filename;
@@ -34,5 +34,5 @@ function miniFile(filePath) {
 	});
 }
 
-miniFile('./test-files/test.js');
-miniFile('./test-files/test.css');
+minifile('./test-files/test.js');
+minifile('./test-files/test.css');
