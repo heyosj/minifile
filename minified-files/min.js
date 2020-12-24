@@ -1,0 +1,1 @@
+functionaddTwoNumbers(num1,num2){returnnum1*num2;//testing.}
