@@ -1,7 +1,7 @@
 const fs = require('fs');
+const regex = /\/\*[\s\S]*?\*\/|([^\\:]|^)\/\/.*$/gm;
 
 function minifile(filePath) {
-	const regex = /\/\*[\s\S]*?\*\/|([^\\:]|^)\/\/.*$/gm;
 	const files = filePath.split('/');
 	let filename;
 	let fileType;
@@ -19,7 +19,7 @@ function minifile(filePath) {
 			console.log(err);
 			return;
 		}
-		let removedWhiteSpace = fileContent.replace(/\s/g, ' ');
+		const removedWhiteSpace = fileContent.replace(/\s/g, ' ');
 		const noComments = removedWhiteSpace.replace(regex, '$1');
 		const folderName = './minifiedFiles';
 
