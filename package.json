@@ -1,11 +1,14 @@
 {
-  "name": "minifile",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Oscar Sanchez Jr.",
-  "license": "ISC"
+	"name": "minifile",
+	"version": "1.0.0",
+	"description": "",
+	"main": "./bin/main.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Oscar Sanchez Jr.",
+	"license": "ISC",
+	"bin": {
+		"minify": "./bin/main.js"
+	}
 }

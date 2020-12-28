@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const fs = require('fs');
 const regex = /\/\*[\s\S]*?\*\/|([^\\:]|^)\/\/.*$/gm;
 
@@ -21,7 +22,7 @@ function minifile(filePath) {
 		}
 		const removedWhiteSpace = fileContent.replace(/\s/g, ' ');
 		const noComments = removedWhiteSpace.replace(regex, '$1');
-		const folderName = './minifiedFiles';
+		const folderName = './minified-files';
 
 		if (!fs.existsSync(folderName)) {
 			fs.mkdirSync(folderName);
@@ -34,5 +35,7 @@ function minifile(filePath) {
 	});
 }
 
-minifile('./test-files/test.js');
-minifile('./test-files/test.css');
+const args = process.argv;
+const path = args[2];
+
+minifile(path);
