@@ -1,7 +1,7 @@
 {
-	"name": "minifile",
+	"name": "@heyosj/minifile",
 	"version": "1.0.0",
-	"description": "",
+	"description": "<h1 align=\"center\">Welcome to minifile 👋</h1> <p>   <img alt=\"Version\" src=\"https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000\" />   <a href=\"#\" target=\"_blank\">     <img alt=\"License: ISC\" src=\"https://img.shields.io/badge/License-ISC-yellow.svg\" />   </a> </p>",
 	"main": "./bin/main.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
@@ -9,6 +9,14 @@
 	"author": "Oscar Sanchez Jr.",
 	"license": "ISC",
 	"bin": {
-		"minify": "./bin/main.js"
-	}
+		"minify": "bin/main.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/heyosj/minifile.git"
+	},
+	"bugs": {
+		"url": "https://github.com/heyosj/minifile/issues"
+	},
+	"homepage": "https://github.com/heyosj/minifile#readme"
 }
