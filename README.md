@@ -19,7 +19,7 @@ npm install @heyosj/minifile -g
 <p> To minify files call the package with keyword `minify` with the path to where the original file is located </p>
 
 ```sh
-Desktop ~ minify ./original-files/originalJS.js
+minify ./myprojects-files/originalJS.js
 ```
 
 <p>Once the command is ran this will create a folder named `minified-files` that will include the name of your original file but with a `.min` included. From there you can link to it as you normally would with the original files</p>
