@@ -18,5 +18,10 @@
 	"bugs": {
 		"url": "https://github.com/heyosj/minifile/issues"
 	},
-	"homepage": "https://github.com/heyosj/minifile#readme"
+	"homepage": "https://github.com/heyosj/minifile#readme",
+	"keywords": [
+		"javascript",
+		"css",
+		"minify"
+	]
 }
