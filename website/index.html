@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>minifile</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="relative flex flex-wrap items-center justify-between px-2 py-3 mb-3 bg-green-50">
+        <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
+            <div class="w-full relative flex justify-between lg:w-auto  px-4 lg:static lg:block lg:justify-start">
+                <a class="text-sm font-extralight leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-black'
+                    href=" #">
+                    minifile
+                </a>
+
+            </div>
+            <div class="lg:flex flex-grow items-center">
+                <ul class="flex lg:flex-row list-none ml-auto">
+                    <li class="nav-item">
+                        <a class="px-3 py-2 flex items-center text-xs uppercase font-extralight leading-snug text-black hover:opacity-75"
+                            href="#install">
+                            Installation
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="px-3 py-2 flex items-center text-xs uppercase font-extralight leading-snug text-black hover:opacity-75"
+                            href="#usage">
+                            Usage
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End of Navbar -->
+
+    <!-- Landing -->
+    <div class="container mx-auto p-40 text-center">
+        <div>
+            <h1 class="tracking-widest text-4xl font-thin">minifile</h1>
+            <p class="text-1xl pt-2 font-extralight">minify your projects</p>
+            <button class="p-2 uppercase text-xs font-extralight border-2 border-gray-700 mt-6 rounded-md"><a
+                    href='#install'>get
+                    started</a> </button>
+        </div>
+    </div>
+    <!-- End of Landing -->
+
+    <!-- Installation -->
+    <div class="mx-auto p-20 bg-green-50 md:text-center lg:py-40">
+        <h1 class="lowercase tracking-widest mb-6 text-3xl font-thin">Installation</h1>
+        <p class="mb-6 text-1xl font-extralight">Install minifile via npm</p>
+        <code class="bg-green-200 p-5 rounded-md" id="install"> $ npm install <span>@heyosj/minifile</span></code>
+    </div>
+    <!-- End of Installation -->
+
+    <!-- Usage -->
+    <div class='mx-auto p-20 md:mx-24 lg:mx-96'>
+        <h1 class="lowercase tracking-widest mb-6 text-3xl font-thin">usage</h1>
+        <p class=" mb-4 text-1xl font-extralight">minifile works as a CLI</p>
+        <p class="mb-10 text-1xl font-extralight">Make sure to either be in the exact directory of your files that need
+            minify or to call minify
+            to your exact
+            path where the file is located</p>
+        <code class="bg-gray-100 p-5 rounded-md" id="usage">$ minify originalJS.js</code>
+        <p class="mt-8 text-1xl font-extralight">Once you call minify this will generate a folder with a minified
+            version of the original file, a
+            .min
+            extension will be seen too.</p>
+    </div>
+    <!-- End of Usage -->
+
+    <!-- Footer -->
+    <div class="mx-auto lg:h-full pl-10 bg-green-50 text-xs text-center tracking-widest font-extralight">
+        <footer class="w-full text-center border-t border-grey p-4 pin-b">© 2021 Oscar Sanchez Jr.</footer>
+
+    </div>
+
+</body>
+
+</html>
